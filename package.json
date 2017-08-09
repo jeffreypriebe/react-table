@@ -34,6 +34,7 @@
     "build": "npm-run-all build:*",
     "prepublish": "npm run build && npm run umd",
     "postpublish": "git push --tags",
+    "postinstall": "npm i babel-cli@6.14.0 && npm run build:node",
     "docs": "yarn watch & cd docs && yarn && yarn start",
     "docs:build": "yarn build && cd docs && yarn && yarn run build"
   },
